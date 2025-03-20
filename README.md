@@ -1,5 +1,5 @@
+<img src="https://cdn.jsdelivr.net/gh/velvetcss/velvet/banner.png"></img>
 <div align="center">
-<img src="https://github.com/velvetcss.png"></img>
 <img src="https://img.shields.io/badge/License-MIT-green" alt="License"></img>
 <img src="https://img.shields.io/badge/Status-Alpha-yellow" alt="Status"></img>
 </div>
