@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velvet UI Framework Demo</title>
+  <link rel="stylesheet" href="./velvet.css">
+</head>
+<body>
+  <section class="container">
+    <h1>Velvet</h1>
+    <p>A modern, lightweight CSS styles with elegant animations and components. Classes are optional!</p>
+    
+    <div class="velvet-flex velvet-gap">
+      <button>Primary Button</button>
+      <button class="velvet-btn-secondary">Secondary Button</button>
+      <button class="velvet-btn-accent">Accent Button</button>
+      <button class="velvet-btn-success">Success Button</button>
+      <button class="velvet-btn-warning">Warning Button</button>
+      <button class="velvet-btn-danger">Danger Button</button>
+    </div>
+    
+    <div class="velvet-flex velvet-gap" style="margin-top: 20px;">
+      <button class="velvet-btn-outline">Outline Button</button>
+      <button class="velvet-btn-outline velvet-btn-secondary">Outline Secondary</button>
+      <button class="velvet-btn-sm">Small Button</button>
+      <button class="velvet-btn-lg">Large Button</button>
+      <button class="velvet-btn-round">Round Button</button>
+	  <button class="velvet-exclude">Excluded (Untouched by Velvet) Button</button>
+      <button class="velvet-btn-icon">+</button>
+    </div>
+    
+    <hr>
+    
+    <div class="velvet-grid" style="grid-template-columns: 1fr 1fr; gap: 20px;">
+      <div class="card">
+        <h3>Card Component</h3>
+        <p>This is a standard card component with hover effects.</p>
+        <button>Learn More</button>
+      </div>
+      
+      <div class="card velvet-card-flat">
+        <h3>Flat Card</h3>
+        <p>This is a flat card with a border instead of a shadow.</p>
+        <button class="velvet-btn-outline">View Details</button>
+      </div>
+    </div>
+    
+    <hr>
+    
+    <h3>Form Elements</h3>
+    <div class="velvet-grid" style="grid-template-columns: 1fr 1fr; gap: 20px;">
+      <div>
+        <input type="text" placeholder="Standard Input">
+        <input type="text" placeholder="Small Input" class="velvet-input-sm">
+        <input type="text" placeholder="Large Input" class="velvet-input-lg">
+        
+        <div class="velvet-input-group">
+          <input type="text" placeholder="Search...">
+          <button>Search</button>
+        </div>
+      </div>
+      
+      <div>
+        <select>
+          <option>Select Option</option>
+          <option>Option 1</option>
+          <option>Option 2</option>
+        </select>
+        
+        <textarea placeholder="Textarea example"></textarea>
+        
+        <label class="velvet-switch">
+          <input type="checkbox">
+          <span class="velvet-slider"></span>
+        </label>
+      </div>
+    </div>
+    
+    <hr>
+    
+    <h3>Tables</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John Doe</td>
+          <td>john@example.com</td>
+          <td><span class="badge velvet-badge-success">Active</span></td>
+          <td>
+            <button class="velvet-btn-sm">Edit</button>
+            <button class="velvet-btn-sm velvet-btn-danger">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Jane Smith</td>
+          <td>jane@example.com</td>
+          <td><span class="badge velvet-badge-warning">Pending</span></td>
+          <td>
+            <button class="velvet-btn-sm">Edit</button>
+            <button class="velvet-btn-sm velvet-btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <hr>
+    
+    <h3>Loading Indicators</h3>
+    <div class="velvet-flex velvet-gap velvet-align-center">
+      <div class="velvet-loader"></div>
+      <div class="velvet-loader velvet-loader-sm velvet-loader-secondary"></div>
+      <div class="velvet-loader velvet-loader-lg velvet-loader-accent"></div>
+      
+      <div class="velvet-spinner-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <div class="velvet-spinner-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    
+    <hr>
+    
+    <h3>Progress Bars</h3>
+    <div class="progress">
+      <div class="progress-bar" style="width: 75%"></div>
+    </div>
+    
+    <div class="progress">
+      <div class="progress-bar velvet-progress-secondary velvet-progress-striped" style="width: 45%"></div>
+    </div>
+    
+    <div class="progress velvet-progress-lg">
+      <div class="progress-bar velvet-progress-success velvet-progress-animated" style="width: 60%"></div>
+    </div>
+    
+    <hr>
+    
+    <h3>Badges & Labels</h3>
+    <div class="velvet-flex velvet-gap velvet-align-center">
+      <span class="badge">Default</span>
+      <span class="badge velvet-badge-primary">Primary</span>
+      <span class="badge velvet-badge-secondary">Secondary</span>
+      <span class="badge velvet-badge-success">Success</span>
+      <span class="badge velvet-badge-warning">Warning</span>
+      <span class="badge velvet-badge-danger">Danger</span>
+      <span class="badge velvet-badge-pill">Pill</span>
+      <span class="badge velvet-badge-outline velvet-badge-primary">Outline</span>
+    </div>
+    
+    <hr>
+    
+    <h3>Typography & Links</h3>
+    <blockquote>
+      This is a blockquote with hover effects and styling.
+    </blockquote>
+    
+    <div>
+      <a href="#">Standard Link</a> |
+      <a href="#" class="velvet-link-no-underline">No Underline</a> |
+      <a href="#" class="velvet-link-button">Button Link</a>
+    </div>
+    
+    <div>
+      <code>This is a code snippet with hover effect</code>
+    </div>
+    
+    <pre>const velvet = {
+  isAwesome: true,
+  features: ['animations', 'components', 'utilities']
+};</pre>
+    
+    <ul>
+      <li>List item with hover effect</li>
+      <li>Another list item</li>
+      <li>Third list item</li>
+    </ul>
+    
+    <ul class="velvet-list-inline">
+      <li>Inline Item 1</li>
+      <li>Inline Item 2</li>
+      <li>Inline Item 3</li>
+    </ul>
+  </section>
+  
+  <section class="container" style="margin-top: 30px;">
+    <h3>Dark Mode Toggle (simple, but good)</h3>
+    <p>In a real app, you would use JavaScript to toggle the data-theme attribute on the HTML element.</p>
+    <button onclick="document.documentElement.setAttribute('data-theme', document.documentElement.getAttribute('data-theme') === 'dark' ? '' : 'dark')">
+      Toggle Dark Mode
+    </button>
+  </section>
+</body>
+</html>

@@ -1,0 +1,869 @@
+:root {
+  --velvet-primary: #e91e63;
+  --velvet-primary-light: rgba(233, 30, 99, 0.2);
+  --velvet-secondary: #9c27b0;
+  --velvet-secondary-light: rgba(156, 39, 176, 0.2);
+  --velvet-accent: #2196f3;
+  --velvet-accent-light: rgba(33, 150, 243, 0.2);
+  --velvet-success: #4caf50;
+  --velvet-success-light: rgba(76, 175, 80, 0.2);
+  --velvet-warning: #ff9800;
+  --velvet-warning-light: rgba(255, 152, 0, 0.2);
+  --velvet-danger: #f44336;
+  --velvet-danger-light: rgba(244, 67, 54, 0.2);
+  --velvet-dark: #212121;
+  --velvet-gray: #757575;
+  --velvet-light-gray: #e0e0e0;
+  --velvet-light: #f5f5f5;
+  --velvet-white: #ffffff;
+  
+  --velvet-duration: 0.3s;
+  --velvet-duration-slow: 0.5s;
+  --velvet-duration-fast: 0.15s;
+  --velvet-easing: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --velvet-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  --velvet-radius-sm: 4px;
+  --velvet-radius: 8px;
+  --velvet-radius-lg: 16px;
+  --velvet-radius-full: 999px;
+  
+  --velvet-shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.08);
+  --velvet-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --velvet-shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.15);
+  
+  --velvet-font-size-xs: 0.75rem;
+  --velvet-font-size-sm: 0.875rem;
+  --velvet-font-size-md: 1rem;
+  --velvet-font-size-lg: 1.25rem;
+  --velvet-font-size-xl: 1.5rem;
+  --velvet-font-size-2xl: 2rem;
+
+  --velvet-z-index-low: 10;
+  --velvet-z-index-medium: 50;
+  --velvet-z-index-high: 100;
+  --velvet-z-index-top: 1000;
+}
+
+[data-theme="dark"] {
+  --velvet-dark: #f5f5f5;
+  --velvet-light: #212121;
+  --velvet-light-gray: #424242;
+  --velvet-gray: #bdbdbd;
+  --velvet-white: #333333;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: var(--velvet-light);
+  color: var(--velvet-dark);
+  transition: all var(--velvet-duration) var(--velvet-easing);
+}
+
+button:not(.velvet-exclude) {
+  background-color: var(--velvet-primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--velvet-radius);
+  cursor: pointer;
+  transition: all var(--velvet-duration) var(--velvet-easing);
+  box-shadow: var(--velvet-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+button:not(.velvet-exclude):hover {
+  transform: translateY(-2px);
+  box-shadow: var(--velvet-shadow-lg);
+}
+
+button:not(.velvet-exclude):active {
+  transform: translateY(1px);
+  box-shadow: var(--velvet-shadow-sm);
+}
+
+button:not(.velvet-exclude).velvet-btn-secondary {
+  background-color: var(--velvet-secondary);
+}
+
+button:not(.velvet-exclude).velvet-btn-accent {
+  background-color: var(--velvet-accent);
+}
+
+button:not(.velvet-exclude).velvet-btn-success {
+  background-color: var(--velvet-success);
+}
+
+button:not(.velvet-exclude).velvet-btn-warning {
+  background-color: var(--velvet-warning);
+}
+
+button:not(.velvet-exclude).velvet-btn-danger {
+  background-color: var(--velvet-danger);
+}
+
+button:not(.velvet-exclude).velvet-btn-outline {
+  background-color: transparent;
+  color: var(--velvet-primary);
+  border: 2px solid var(--velvet-primary);
+}
+
+button:not(.velvet-exclude).velvet-btn-outline:hover {
+  background-color: var(--velvet-primary-light);
+}
+
+button:not(.velvet-exclude).velvet-btn-outline.velvet-btn-secondary {
+  color: var(--velvet-secondary);
+  border-color: var(--velvet-secondary);
+}
+
+button:not(.velvet-exclude).velvet-btn-outline.velvet-btn-secondary:hover {
+  background-color: var(--velvet-secondary-light);
+}
+
+button:not(.velvet-exclude).velvet-btn-outline.velvet-btn-accent {
+  color: var(--velvet-accent);
+  border-color: var(--velvet-accent);
+}
+
+button:not(.velvet-exclude).velvet-btn-outline.velvet-btn-accent:hover {
+  background-color: var(--velvet-accent-light);
+}
+
+button:not(.velvet-exclude).velvet-btn-sm {
+  padding: 6px 12px;
+  font-size: var(--velvet-font-size-sm);
+}
+
+button:not(.velvet-exclude).velvet-btn-lg {
+  padding: 12px 24px;
+  font-size: var(--velvet-font-size-lg);
+}
+
+button:not(.velvet-exclude).velvet-btn-round {
+  border-radius: var(--velvet-radius-full);
+}
+
+button:not(.velvet-exclude).velvet-btn-icon {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--velvet-radius-full);
+}
+
+button:not(.velvet-exclude).velvet-btn-icon.velvet-btn-sm {
+  width: 30px;
+  height: 30px;
+}
+
+button:not(.velvet-exclude).velvet-btn-icon.velvet-btn-lg {
+  width: 50px;
+  height: 50px;
+}
+
+div:not(.velvet-exclude) {
+  transition: all var(--velvet-duration) var(--velvet-easing);
+}
+
+.card:not(.velvet-exclude),
+article:not(.velvet-exclude),
+section:not(.velvet-exclude),
+.container:not(.velvet-exclude),
+.box:not(.velvet-exclude),
+aside:not(.velvet-exclude) {
+  background-color: var(--velvet-white);
+  border-radius: var(--velvet-radius);
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: var(--velvet-shadow);
+  transition: all var(--velvet-duration) var(--velvet-easing);
+}
+
+.card:not(.velvet-exclude):hover,
+article:not(.velvet-exclude):hover,
+section:not(.velvet-exclude):hover,
+.container:not(.velvet-exclude):hover,
+.box:not(.velvet-exclude):hover,
+aside:not(.velvet-exclude):hover {
+  transform: translateY(-3px);
+  box-shadow: var(--velvet-shadow-lg);
+}
+
+.velvet-card-flat:not(.velvet-exclude) {
+  box-shadow: none;
+  border: 1px solid var(--velvet-light-gray);
+}
+
+.velvet-card-flat:not(.velvet-exclude):hover {
+  box-shadow: var(--velvet-shadow);
+}
+
+.velvet-card-bordered:not(.velvet-exclude) {
+  border: 1px solid var(--velvet-light-gray);
+}
+
+input:not(.velvet-exclude),
+textarea:not(.velvet-exclude),
+select:not(.velvet-exclude) {
+  border: 2px solid var(--velvet-light-gray);
+  border-radius: var(--velvet-radius);
+  padding: 10px;
+  transition: all var(--velvet-duration) var(--velvet-easing);
+  width: 100%;
+  margin: 10px 0;
+  background-color: var(--velvet-white);
+  color: var(--velvet-dark);
+}
+
+input:not(.velvet-exclude):focus,
+textarea:not(.velvet-exclude):focus,
+select:not(.velvet-exclude):focus {
+  border-color: var(--velvet-accent);
+  box-shadow: 0 0 0 3px var(--velvet-accent-light);
+  outline: none;
+}
+
+input:not(.velvet-exclude).velvet-input-sm,
+textarea:not(.velvet-exclude).velvet-input-sm,
+select:not(.velvet-exclude).velvet-input-sm {
+  padding: 6px 10px;
+  font-size: var(--velvet-font-size-sm);
+}
+
+input:not(.velvet-exclude).velvet-input-lg,
+textarea:not(.velvet-exclude).velvet-input-lg,
+select:not(.velvet-exclude).velvet-input-lg {
+  padding: 12px 20px;
+  font-size: var(--velvet-font-size-lg);
+}
+
+.velvet-input-group:not(.velvet-exclude) {
+  display: flex;
+  margin: 10px 0;
+}
+
+.velvet-input-group:not(.velvet-exclude) input,
+.velvet-input-group:not(.velvet-exclude) select {
+  flex: 1;
+  margin: 0;
+}
+
+.velvet-input-group:not(.velvet-exclude) button {
+  margin: 0;
+  border-radius: 0 var(--velvet-radius) var(--velvet-radius) 0;
+}
+
+.velvet-input-group:not(.velvet-exclude) input:not(:last-child),
+.velvet-input-group:not(.velvet-exclude) select:not(:last-child) {
+  border-radius: var(--velvet-radius) 0 0 var(--velvet-radius);
+}
+
+a:not(.velvet-exclude) {
+  color: var(--velvet-primary);
+  text-decoration: none;
+  transition: all var(--velvet-duration) var(--velvet-easing);
+  position: relative;
+}
+
+a:not(.velvet-exclude):hover {
+  color: var(--velvet-secondary);
+}
+
+a:not(.velvet-exclude):after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--velvet-secondary);
+  transition: width var(--velvet-duration) var(--velvet-easing);
+}
+
+a:not(.velvet-exclude):hover:after {
+  width: 100%;
+}
+
+a:not(.velvet-exclude).velvet-link-no-underline:after {
+  display: none;
+}
+
+a:not(.velvet-exclude).velvet-link-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--velvet-primary);
+  color: white;
+  border-radius: var(--velvet-radius);
+  text-align: center;
+}
+
+a:not(.velvet-exclude).velvet-link-button:hover {
+  background-color: var(--velvet-secondary);
+  color: white;
+}
+
+a:not(.velvet-exclude).velvet-link-button:after {
+  display: none;
+}
+
+table:not(.velvet-exclude) {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: var(--velvet-radius);
+  overflow: hidden;
+  box-shadow: var(--velvet-shadow);
+  background-color: var(--velvet-white);
+}
+
+th:not(.velvet-exclude),
+td:not(.velvet-exclude) {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--velvet-light-gray);
+  transition: all var(--velvet-duration) var(--velvet-easing);
+}
+
+th:not(.velvet-exclude) {
+  background-color: var(--velvet-primary);
+  color: white;
+}
+
+tr:not(.velvet-exclude):last-child td {
+  border-bottom: none;
+}
+
+tr:not(.velvet-exclude):hover td {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+table:not(.velvet-exclude).velvet-table-striped tr:nth-child(even) td {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+table:not(.velvet-exclude).velvet-table-bordered {
+  border: 1px solid var(--velvet-light-gray);
+}
+
+table:not(.velvet-exclude).velvet-table-bordered th,
+table:not(.velvet-exclude).velvet-table-bordered td {
+  border: 1px solid var(--velvet-light-gray);
+}
+
+img:not(.velvet-exclude) {
+  max-width: 100%;
+  border-radius: var(--velvet-radius);
+  transition: all var(--velvet-duration) var(--velvet-easing);
+}
+
+img:not(.velvet-exclude):hover {
+  transform: scale(1.02);
+  box-shadow: var(--velvet-shadow);
+}
+
+img:not(.velvet-exclude).velvet-img-circle {
+  border-radius: 50%;
+}
+
+img:not(.velvet-exclude).velvet-img-thumbnail {
+  padding: 5px;
+  background-color: var(--velvet-white);
+  border: 1px solid var(--velvet-light-gray);
+}
+
+h1:not(.velvet-exclude),
+h2:not(.velvet-exclude),
+h3:not(.velvet-exclude),
+h4:not(.velvet-exclude),
+h5:not(.velvet-exclude),
+h6:not(.velvet-exclude) {
+  transition: all var(--velvet-duration) var(--velvet-easing);
+  color: var(--velvet-dark);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h1:not(.velvet-exclude):first-child,
+h2:not(.velvet-exclude):first-child,
+h3:not(.velvet-exclude):first-child,
+h4:not(.velvet-exclude):first-child,
+h5:not(.velvet-exclude):first-child,
+h6:not(.velvet-exclude):first-child {
+  margin-top: 0;
+}
+
+h1:not(.velvet-exclude):hover,
+h2:not(.velvet-exclude):hover,
+h3:not(.velvet-exclude):hover,
+h4:not(.velvet-exclude):hover,
+h5:not(.velvet-exclude):hover,
+h6:not(.velvet-exclude):hover {
+  color: var(--velvet-primary);
+}
+
+ul:not(.velvet-exclude),
+ol:not(.velvet-exclude) {
+  padding-left: 20px;
+}
+
+li:not(.velvet-exclude) {
+  margin: 8px 0;
+  transition: all var(--velvet-duration) var(--velvet-easing);
+}
+
+li:not(.velvet-exclude):hover {
+  transform: translateX(3px);
+}
+
+ul:not(.velvet-exclude).velvet-list-unstyled {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul:not(.velvet-exclude).velvet-list-inline {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul:not(.velvet-exclude).velvet-list-inline li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+code:not(.velvet-exclude),
+pre:not(.velvet-exclude) {
+  background-color: var(--velvet-light);
+  border-radius: var(--velvet-radius);
+  padding: 2px 6px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  transition: all var(--velvet-duration) var(--velvet-easing);
+}
+
+pre:not(.velvet-exclude) {
+  padding: 15px;
+  overflow-x: auto;
+}
+
+code:not(.velvet-exclude):hover,
+pre:not(.velvet-exclude):hover {
+  background-color: #eaeaea;
+}
+
+blockquote:not(.velvet-exclude) {
+  border-left: 4px solid var(--velvet-primary);
+  margin: 15px 0;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 0 var(--velvet-radius) var(--velvet-radius) 0;
+  transition: all var(--velvet-duration) var(--velvet-easing);
+}
+
+blockquote:not(.velvet-exclude):hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  transform: translateX(3px);
+}
+
+hr:not(.velvet-exclude) {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, var(--velvet-primary), var(--velvet-secondary));
+  margin: 20px 0;
+  border-radius: var(--velvet-radius);
+}
+
+.velvet-flex:not(.velvet-exclude) {
+  display: flex;
+}
+
+.velvet-flex-column:not(.velvet-exclude) {
+  flex-direction: column;
+}
+
+.velvet-flex-grow:not(.velvet-exclude) {
+  flex-grow: 1;
+}
+
+.velvet-justify-center:not(.velvet-exclude) {
+  justify-content: center;
+}
+
+.velvet-justify-between:not(.velvet-exclude) {
+  justify-content: space-between;
+}
+
+.velvet-justify-around:not(.velvet-exclude) {
+  justify-content: space-around;
+}
+
+.velvet-align-center:not(.velvet-exclude) {
+  align-items: center;
+}
+
+.velvet-align-start:not(.velvet-exclude) {
+  align-items: flex-start;
+}
+
+.velvet-align-end:not(.velvet-exclude) {
+  align-items: flex-end;
+}
+
+.velvet-gap-sm:not(.velvet-exclude) {
+  gap: 0.5rem;
+}
+
+.velvet-gap:not(.velvet-exclude) {
+  gap: 1rem;
+}
+
+.velvet-gap-lg:not(.velvet-exclude) {
+  gap: 2rem;
+}
+
+.velvet-grid:not(.velvet-exclude) {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.velvet-animate-in {
+  animation: velvetFadeIn var(--velvet-duration) var(--velvet-easing);
+}
+
+.velvet-animate-out {
+  animation: velvetFadeOut var(--velvet-duration) var(--velvet-easing);
+}
+
+@keyframes velvetFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes velvetFadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(10px); }
+}
+
+.velvet-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.velvet-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.velvet-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--velvet-light-gray);
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.velvet-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+  box-shadow: var(--velvet-shadow-sm);
+}
+
+input:checked + .velvet-slider {
+  background-color: var(--velvet-primary);
+}
+
+input:focus + .velvet-slider {
+  box-shadow: 0 0 1px var(--velvet-primary);
+}
+
+input:checked + .velvet-slider:before {
+  transform: translateX(26px);
+}
+
+.velvet-switch.velvet-switch-sm {
+  width: 40px;
+  height: 24px;
+}
+
+.velvet-switch.velvet-switch-sm .velvet-slider:before {
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+}
+
+.velvet-switch.velvet-switch-sm input:checked + .velvet-slider:before {
+  transform: translateX(16px);
+}
+
+.velvet-switch.velvet-switch-lg {
+  width: 80px;
+  height: 44px;
+}
+
+.velvet-switch.velvet-switch-lg .velvet-slider:before {
+  height: 36px;
+  width: 36px;
+  left: 4px;
+  bottom: 4px;
+}
+
+.velvet-switch.velvet-switch-lg input:checked + .velvet-slider:before {
+  transform: translateX(36px);
+}
+
+.progress:not(.velvet-exclude) {
+  height: 8px;
+  width: 100%;
+  background-color: var(--velvet-light-gray);
+  border-radius: var(--velvet-radius-full);
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.progress-bar:not(.velvet-exclude) {
+  height: 100%;
+  background-color: var(--velvet-primary);
+  transition: width 0.5s var(--velvet-easing);
+}
+
+.progress-bar.velvet-progress-striped:not(.velvet-exclude) {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 1rem 1rem;
+}
+
+.progress-bar.velvet-progress-animated:not(.velvet-exclude) {
+  animation: velvetProgressStripe 1s linear infinite;
+}
+
+@keyframes velvetProgressStripe {
+  from { background-position: 1rem 0; }
+  to { background-position: 0 0; }
+}
+
+.progress.velvet-progress-sm:not(.velvet-exclude) {
+  height: 4px;
+}
+
+.progress.velvet-progress-lg:not(.velvet-exclude) {
+  height: 16px;
+}
+
+.progress-bar.velvet-progress-secondary:not(.velvet-exclude) {
+  background-color: var(--velvet-secondary);
+}
+
+.progress-bar.velvet-progress-accent:not(.velvet-exclude) {
+  background-color: var(--velvet-accent);
+}
+
+.progress-bar.velvet-progress-success:not(.velvet-exclude) {
+  background-color: var(--velvet-success);
+}
+
+.progress-bar.velvet-progress-warning:not(.velvet-exclude) {
+  background-color: var(--velvet-warning);
+}
+
+.progress-bar.velvet-progress-danger:not(.velvet-exclude) {
+  background-color: var(--velvet-danger);
+}
+
+.badge:not(.velvet-exclude) {
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: var(--velvet-accent);
+  color: white;
+  border-radius: 12px;
+  font-size: var(--velvet-font-size-xs);
+  font-weight: bold;
+}
+
+.badge.velvet-badge-primary:not(.velvet-exclude) {
+  background-color: var(--velvet-primary);
+}
+
+.badge.velvet-badge-secondary:not(.velvet-exclude) {
+  background-color: var(--velvet-secondary);
+}
+
+.badge.velvet-badge-success:not(.velvet-exclude) {
+  background-color: var(--velvet-success);
+}
+
+.badge.velvet-badge-warning:not(.velvet-exclude) {
+  background-color: var(--velvet-warning);
+}
+
+.badge.velvet-badge-danger:not(.velvet-exclude) {
+  background-color: var(--velvet-danger);
+}
+
+.badge.velvet-badge-pill:not(.velvet-exclude) {
+  border-radius: var(--velvet-radius-full);
+}
+
+.badge.velvet-badge-outline:not(.velvet-exclude) {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.badge.velvet-badge-outline.velvet-badge-primary:not(.velvet-exclude) {
+  color: var(--velvet-primary);
+  border-color: var(--velvet-primary);
+}
+
+.badge.velvet-badge-outline.velvet-badge-secondary:not(.velvet-exclude) {
+  color: var(--velvet-secondary);
+  border-color: var(--velvet-secondary);
+}
+
+.velvet-loader:not(.velvet-exclude) {
+  border: 4px solid var(--velvet-light-gray);
+  border-radius: 50%;
+  border-top: 4px solid var(--velvet-primary);
+  width: 30px;
+  height: 30px;
+  animation: velvetSpin 0.8s linear infinite;
+}
+
+.velvet-loader.velvet-loader-sm:not(.velvet-exclude) {
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+}
+
+.velvet-loader.velvet-loader-lg:not(.velvet-exclude) {
+  width: 50px;
+  height: 50px;
+  border-width: 6px;
+}
+
+.velvet-loader.velvet-loader-secondary:not(.velvet-exclude) {
+  border-top-color: var(--velvet-secondary);
+}
+
+.velvet-loader.velvet-loader-accent:not(.velvet-exclude) {
+  border-top-color: var(--velvet-accent);
+}
+
+@keyframes velvetSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.velvet-spinner-dots:not(.velvet-exclude) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.velvet-spinner-dots:not(.velvet-exclude) span {
+  width: 8px;
+  height: 8px;
+  margin: 0 2px;
+  background-color: var(--velvet-primary);
+  border-radius: 50%;
+  display: inline-block;
+  animation: velvetBounce 1.4s infinite ease-in-out both;
+}
+
+.velvet-spinner-dots:not(.velvet-exclude) span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.velvet-spinner-dots:not(.velvet-exclude) span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes velvetBounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+.velvet-spinner-ripple:not(.velvet-exclude) {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.velvet-spinner-ripple:not(.velvet-exclude) div {
+  position: absolute;
+  border: 4px solid var(--velvet-primary);
+  opacity: 1;
+  border-radius: 50%;
+  animation: velvetRipple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.velvet-spinner-ripple:not(.velvet-exclude) div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes velvetRipple {
+  0% {
+    top: 28px;
+    left: 28px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: -1px;
+    left: -1px;
+    width: 58px;
+    height: 58px;
+    opacity: 0;
+  }
+}
+
+.velvet-spinner-pulse:not(.velvet-exclude) {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: var(--velvet-primary);
+  border-radius: 50%;
+  animation: velvetPulse 1.2s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+@keyframes velvetPulse {
+  0% { transform: scale(0); opacity: 1; }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+.velvet-skeleton:not(.velvet-exclude) {
+  display: inline-block;
+  width: 100%;
+  height: 1em;
+  background: linear-gradient(90deg, var(--velvet-light-gray) 25%, var(--velvet-light) 50%, var(--velvet-light-gray) 75%);
+  background-size: 200% 100%;
+  border-radius: var(--velvet-radius)
+}
