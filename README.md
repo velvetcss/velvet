@@ -1,4 +1,5 @@
 <img src="https://cdn.jsdelivr.net/gh/velvetcss/velvet/banner.png"></img>
+<div></div> <!-- a trick to make a gap :) -->
 <img src="https://img.shields.io/badge/License-MIT-green" alt="License"></img>
 <img src="https://img.shields.io/badge/Status-Alpha-yellow" alt="Status"></img>
 Velvet is a lightweight, modern CSS and JavaScript stylings designed to create beautiful UI components with minimal effort. It provides a consistent design system with smooth animations, modern styling, and easy customization.
